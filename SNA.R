@@ -24,3 +24,17 @@ plot(g1,
      vertex.color="green",
      edge.color="red")
 g1
+
+#Network measures
+degree(g1)
+
+
+
+
+
+
+
+
+
+
+
