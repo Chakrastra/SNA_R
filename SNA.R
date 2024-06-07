@@ -68,6 +68,22 @@ V(net)$connections<-degree(net) #degree
 V(net)$connections
 V(net)$user
 
+#Histogram of node degree (also we can say user connections)
+
+hist(V(net)$connections,
+     col = 'green',
+     main = 'Histogram of Node Degree',
+     ylab = 'Users',                #Frequency
+     xlab = 'Connections of users') #Degree of vertices
+
+#Network diagram
+set.seed(222)
+plot(net,
+     vertex.color="green",
+     vertex.size = 20,            # Size of the nodes
+     vertex.label.cex = 0.8,      # Size of the label text
+     edge.arrow.size = 0.1,       # Size of the arrow heads
+)
 
 
 ## we can use any layouts from the above they all are slightly different 
