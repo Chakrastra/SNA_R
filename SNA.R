@@ -101,14 +101,36 @@ plot(net,
 plot(net,
      vertex.color=rainbow(52),
      vertex.size = V(net)$connections*0.4,
-     edge.arrow.size=0.1,
+     edge.arrow.size=0.01,
      layout=layout.kamada.kawai
 )
 
 ## we can use any layouts from the above they all are slightly different 
 #whichever shows good layout of network use that then 
 
+# Hub and authorities
 
+hs<- hub_score(net)$vector
+as<- authority.score(net)$vector
+par(mfrow=c(1,2))
+set.seed(123)
+plot(net,
+     directed_graph=F,
+     vertex.size=hs*30,
+     main="Hubs",
+     vertex.color=rainbow(52),
+     edge.arrow.size=0.01,
+     layout=layout.kamada.kawai
+     )
+set.seed(123)
+plot(net,
+     directed_graph=F,
+     vertex.size=as*30,
+     main="Authorities",
+     vertex.color=rainbow(52),
+     edge.arrow.size=0.01,
+     layout=layout.kamada.kawai
+)
+par(mfrow=c(1,1))
 
-
-
+ 
