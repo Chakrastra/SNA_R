@@ -85,6 +85,25 @@ plot(net,
      edge.arrow.size = 0.1,       # Size of the arrow heads
 )
 
+#Highlighting degrees & layouts
+plot(net,
+     vertex.color=rainbow(52),
+     vertex.size = V(net)$connections*0.4, #degree
+     edge.arrow.size=0.1,
+     layout=layout.fruchterman.reingold
+)
+plot(net,
+     vertex.color=rainbow(52),
+     vertex.size = V(net)$connections*0.4,
+     edge.arrow.size=0.1,
+     layout=layout.graphopt
+)
+plot(net,
+     vertex.color=rainbow(52),
+     vertex.size = V(net)$connections*0.4,
+     edge.arrow.size=0.1,
+     layout=layout.kamada.kawai
+)
 
 ## we can use any layouts from the above they all are slightly different 
 #whichever shows good layout of network use that then 
