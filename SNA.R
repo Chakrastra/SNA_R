@@ -133,4 +133,11 @@ plot(net,
 )
 par(mfrow=c(1,1))
 
- 
+#Community detection
+net<-graph.data.frame(x,directed = F)
+cnet<- cluster_edge_betweenness(net)
+plot(cnet,
+     net,
+     vertex.size=20,
+     verter.label.cex=0.8
+     )
