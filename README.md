@@ -1,4 +1,4 @@
-# Learning_R
+# Social Network Analysis
 
 This project provides an introduction to Social Network Analysis using the igraph package in R. It covers creating and visualizing graphs, calculating network measures such as degree, diameter, edge density, reciprocity, closeness, and betweenness, reading data from files to create network graphs, visualizing networks with various layouts and customizations, exploring hub and authority scores, and performing community detection to identify clusters within the network.
 
